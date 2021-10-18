@@ -66,9 +66,9 @@ public struct Post : Decodable {
             
             copyright = try? values.decode(String.self, forKey: .copyright)
             
-            imageURLString = try values.decode(String.self, forKey: .imageURLString)
+            imageURLString = try? values.decode(String.self, forKey: .imageURLString)
             
-            imageHDURLString = try values.decode(String.self, forKey: .imageHDURLString)
+            imageHDURLString = try? values.decode(String.self, forKey: .imageHDURLString)
             
         } catch {
             throw APODServiceError.jsonParsingFailure(error: error)
