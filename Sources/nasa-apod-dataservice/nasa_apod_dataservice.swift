@@ -9,7 +9,7 @@ public struct nasa_apod_dataservice {
 import Foundation
 import UIKit
 
-enum MediaType : String, CaseIterable {
+public enum MediaType : String, CaseIterable {
     case image
     case video
 }
@@ -23,13 +23,13 @@ public enum APODServiceError : Error {
 
 public struct Post : Decodable {
     
-    var title : String
-    var explanation : String
-    var date : Date
-    var mediaType : MediaType
-    var copyright : String?
-    var imageURLString : String?
-    var imageHDURLString : String?
+    public let title : String
+    public let explanation : String
+    public var date : Date
+    public let mediaType : MediaType
+    public let copyright : String?
+    public let imageURLString : String?
+    public let imageHDURLString : String?
     
     enum CodingKeys : String, CodingKey {
         case title
