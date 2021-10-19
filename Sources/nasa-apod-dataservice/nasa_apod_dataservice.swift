@@ -3,6 +3,10 @@ import UIKit
 
 public struct NASA_APOD_Service {
     
+    public init() {
+        
+    }
+    
     public func fetchAPODPost(count : Int) async throws -> [Post] {
         let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=" + String(count))!
         
