@@ -8,7 +8,9 @@ public struct NASA_APOD_Service {
     }
     
     public func fetchAPODPost(count : Int) async throws -> [Post] {
-        let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=" + String(count))!
+        //TODO: Yes, its a very bad idea to hard code the key here.
+        let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=krlLfgpr69cBz0GrdsZr8PXU7GflmjewEBygzhd2&count=" + String(count))!
+    
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
